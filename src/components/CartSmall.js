@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
-  const [display, setDisplay] = useState(false);
+  const [isDisplay, setIsDisplay] = useState(false);
   const increment = (id) => {
     for (let i = 0; i < orderList.length; i++) {
       if (orderList[i].id === id) {
@@ -33,16 +33,22 @@ const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
   console.log(orderList);
   return (
     <div>
-      <div className="cart-small" style={{ display: !display && "none" }}>
+      <div className="cart-small" style={{ display: !isDisplay && "none" }}>
         <div className="icon-c">
           {" "}
           <FontAwesomeIcon
             onClick={() => {
-              setDisplay(false);
+              setIsDisplay(false);
             }}
             className="icon-close"
             icon="times"
           />
+        </div>
+        <div
+          className="empty-cart"
+          style={{ display: orderList.length > 0 && "none" }}
+        >
+          <span>Votre panier est vide</span>
         </div>
         {/* <button
         style={{
@@ -52,12 +58,7 @@ const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
       >
         Valider votre panier
       </button>
-      <div
-        className="empty-cart"
-        style={{ display: orderList.length > 0 && "none" }}
-      >
-        <span>Votre panier est vide</span>
-      </div> */}
+      */}
         <div
           className={`${orderList.length > 0 ? "display" : ""} hidden`}
           // style={{ display: orderList.length > 0 && "block" }}
@@ -111,17 +112,21 @@ const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
         </div>
       </div>
       <div
-        style={
-          ({
-            color: orderList.length > 0 && "#07cdbd",
-          },
-          { display: display && "none" })
-        }
+        style={{
+          color: orderList.length > 0 && "#07cdbd",
+          display: isDisplay && "none",
+        }}
+        // style={
+        //   ({
+        //     color: orderList.length > 0 && "#07cdbd",
+        //   },
+        //   { display: display && "none" })
+        // }
         className="cart-icon-area"
       >
         <FontAwesomeIcon
           onClick={() => {
-            setDisplay(true);
+            setIsDisplay(true);
           }}
           className="cart-icon"
           icon="shopping-cart"

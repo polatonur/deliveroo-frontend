@@ -315,9 +315,8 @@ header nav img {
   background-color: rgb(255, 248, 248);
   position: fixed;
   right: 0;
-  bottom: 10px;
   width: 100vw;
-  bottom: 20px;
+  bottom: 40px;
   flex-direction: column;
   align-items: center;
   border-radius: 5px;
@@ -335,13 +334,14 @@ header nav img {
 .cart-icon-area {
   width: 30%;
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   right: 5px;
   bottom: 5px;
 }
 .cart-icon {
   font-size: 2rem;
+  display: inherit;
 }
 
 .small-btn-cart {
@@ -360,8 +360,9 @@ header nav img {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .cart-small .order {
+  min-width: 70%;
   margin-top: 7px;
-  height: 30px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -382,8 +383,8 @@ header nav img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
-  height: 15px;
+  min-width: 15px;
+  min-height: 15px;
   border-radius: 50%;
   border: 1px solid #07cdbd;
   color: #07cdbd;
@@ -391,7 +392,7 @@ header nav img {
 .cart-small .order-list {
   padding: 10px 0;
   border-bottom: 1px solid grey;
-  max-height: 500px;
+  max-height: 400px;
   overflow-y: scroll;
 }
 .delivery-fee .line-1,
@@ -419,7 +420,13 @@ header nav img {
 .display {
   display: block;
 }
-
+.cart-small .empty-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
 /* FOOTER */
 footer {
   width: 100vw;
@@ -471,6 +478,15 @@ footer a {
   .cart {
     display: none;
   }
+  .cart-icon-area {
+    display: flex;
+  }
+  .cart-small {
+    right: 0;
+    width: 50vw;
+    bottom: 40px;
+    right: 0;
+  }
 }
 
 /*--------------- max-width: 992px----------------------  */
@@ -496,7 +512,6 @@ footer a {
     height: 280px;
     width: 600px;
     margin: 0 10px;
-    /* border: 1px solid rgb(184, 182, 182); */
     box-shadow: 0 0 10px gey;
   }
   .category .menu > div > .col-1,
@@ -545,6 +560,12 @@ footer a {
   }
   .arrow {
     display: flex;
+  }
+  .cart-small {
+    right: 0;
+    width: 50vw;
+    bottom: 40px;
+    right: 0;
   }
 }
 /*--------------- max-width: 768px----------------------  */
@@ -642,6 +663,22 @@ footer a {
   .sub-header .col-1 p {
     font-size: 20px;
     line-height: 30px;
+  }
+  .cart-small {
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(255, 248, 248);
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    color: #2e3333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 }
 
