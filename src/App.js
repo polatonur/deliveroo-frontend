@@ -3,6 +3,9 @@ import Categories from "./components/Categories";
 import axios from "axios";
 import logo from "./assets/img/logo.svg";
 import { useState, useEffect } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+library.add(faArrowLeft, faArrowRight);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
