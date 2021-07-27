@@ -14,12 +14,12 @@
   box-sizing: border-box;
   max-width: 1204px;
   margin: 0 auto;
-  padding-right: 372px;
+  /* padding-right: 372px; */
   padding-left: 10px;
 }
 main {
   padding-top: 30px;
-  position: relative;
+  max-width: 830px;
   background-color: #f3f5f5;
 }
 .app {
@@ -108,6 +108,7 @@ header nav img {
 
 /*CARD */
 .category .menu > div {
+  cursor: pointer;
   margin-bottom: 25px;
   width: 400px;
   height: 161px;
@@ -197,21 +198,30 @@ header nav img {
   font-weight: 700;
   margin-right: 3px;
 }
-/* CART */
+.main-container {
+  display: flex;
+  justify-content: center;
+  background-color: #f3f5f5;
+  align-items: flex-start;
+}
+/*//////////////////// CART /////////////////////*/
 .cart {
+  margin: 30px 0 0 10px;
   background-color: white;
-  display: none;
+  position: sticky;
+  width: 330px;
+  top: 0;
   flex-direction: column;
   align-items: center;
-
-  position: absolute;
-  min-height: 190px;
-  top: 30px;
-  right: 350px;
-  width: 355px;
   border-radius: 5px;
-  box-sizing: border-box;
   padding: 10px;
+  color: #2e3333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.btn-active {
+  background-color: #07cdbd;
+  color: white;
 }
 .cart button {
   font-size: 1.2rem;
@@ -225,16 +235,191 @@ header nav img {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.cart div {
+.btn-active {
+  background-color: #07cdbd;
+  color: white;
+}
+.cart .empty-cart {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #868686;
   font-size: 1rem;
   min-height: 110px;
   display: flex;
-  flex-direction: center;
+  justify-content: center;
   align-items: center;
 }
+.cart .order {
+  margin-top: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart .order span:first-child {
+  display: flex;
+}
+.cart .order span:first-child .order-number {
+  margin: 0 4px;
+}
+.cart .order span:first-child .order-title {
+  margin-left: 4px;
+}
+.increment,
+.decrement {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #07cdbd;
+  color: #07cdbd;
+}
+.cart .order-list {
+  border-bottom: 1px solid grey;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+.delivery-fee .line-1,
+.delivery-fee .line-2 {
+  height: 44px;
+  font-size: 16px;
+  line-height: 13.3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-price {
+  font-size: 19px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  height: 64px;
+  border-top: 1px solid grey;
+}
+.hidden {
+  display: none;
+}
+.display {
+  display: block;
+}
+/*//////////////////// CART SMALL /////////////////////*/
+.cart-small {
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgb(255, 248, 248);
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 100vw;
+  bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  color: #2e3333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.icon-c {
+  display: flex;
+  justify-content: flex-end;
+}
+.icon-close {
+  font-size: 1.5rem;
+}
+.cart-icon-area {
+  width: 30%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  right: 5px;
+  bottom: 5px;
+}
+.cart-icon {
+  font-size: 2rem;
+}
+
+.small-btn-cart {
+  width: 100%;
+}
+.btn-validate {
+  font-size: 1.2rem;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: #07cdbd;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.cart-small .order {
+  margin-top: 7px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-small .order span:first-child {
+  display: flex;
+}
+
+.cart-small .order span:first-child .order-number {
+  margin: 0 4px;
+}
+.cart-small .order span:first-child .order-title {
+  margin-left: 4px;
+}
+.increment,
+.decrement {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #07cdbd;
+  color: #07cdbd;
+}
+.cart-small .order-list {
+  padding: 10px 0;
+  border-bottom: 1px solid grey;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.delivery-fee .line-1,
+.delivery-fee .line-2 {
+  height: 44px;
+  font-size: 16px;
+  line-height: 13.3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.total-price {
+  font-size: 19px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  height: 64px;
+  border-top: 1px solid grey;
+}
+.hidden {
+  display: none;
+}
+.display {
+  display: block;
+}
+
 /* FOOTER */
 footer {
   width: 100vw;
@@ -282,6 +467,9 @@ footer a {
   .sub-header .col-2 {
     height: 60%;
     width: 100%;
+  }
+  .cart {
+    display: none;
   }
 }
 
@@ -459,6 +647,9 @@ footer a {
 
 /*--------------- max-width: 567px----------------------  */
 @media (max-width: 576px) {
+  .cart-small {
+    display: block;
+  }
   .container {
     padding-right: 0;
   }

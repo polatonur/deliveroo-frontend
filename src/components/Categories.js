@@ -1,7 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card from "./Card";
 
-const Categories = ({ category }) => {
+const Categories = ({
+  category,
+  allMeals,
+  orderList,
+  setOrderList,
+  setTotalPrice,
+  totalPrice,
+}) => {
   return (
     <div className="category container">
       <h1>{category.name}</h1>
@@ -15,7 +22,17 @@ const Categories = ({ category }) => {
           <FontAwesomeIcon icon="arrow-left" />
         </section>
         {category.meals.map((elem) => {
-          return <Card elem={elem} />;
+          return (
+            <Card
+              key={elem.id}
+              elem={elem}
+              allMeals={allMeals}
+              orderList={orderList}
+              setOrderList={setOrderList}
+              totalPrice={totalPrice}
+              setTotalPrice={setTotalPrice}
+            />
+          );
         })}
       </div>
     </div>

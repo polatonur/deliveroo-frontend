@@ -4,13 +4,21 @@ import axios from "axios";
 import logo from "./assets/img/logo.svg";
 import { useState, useEffect } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-library.add(faArrowLeft, faArrowRight);
+import {
+  faArrowRight,
+  faArrowLeft,
+  faShoppingCart,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
+import Cart from "./components/Cart";
+import CartSmall from "./components/CartSmall";
+library.add(faArrowLeft, faArrowRight, faShoppingCart, faTimes);
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState({});
-
+  const [orderList, setOrderList] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,18 +55,38 @@ function App() {
           <img src={data.restaurant.picture} alt="restaurant" />
         </div>
       </section>
+      <section className="main-container">
+        <main>
+          {data.categories.map((elem, index) => {
+            return (
+              elem.meals.length !== 0 && (
+                <Categories
+                  key={index}
+                  category={elem}
+                  allMeals={data.categories}
+                  orderList={orderList}
+                  setOrderList={setOrderList}
+                  totalPrice={totalPrice}
+                  setTotalPrice={setTotalPrice}
+                />
+              )
+            );
+          })}
+        </main>
 
-      <main>
-        <div className="cart">
-          <button disabled>Valider votre panier</button>
-          <div>
-            <span>Votre panier est vide</span>
-          </div>
-        </div>
-        {data.categories.map((elem, index) => {
-          return elem.meals.length !== 0 && <Categories category={elem} />;
-        })}
-      </main>
+        <Cart
+          orderList={orderList}
+          setOrderList={setOrderList}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
+        />
+        <CartSmall
+          orderList={orderList}
+          setOrderList={setOrderList}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
+        />
+      </section>
       <footer>
         <div>
           {" "}
