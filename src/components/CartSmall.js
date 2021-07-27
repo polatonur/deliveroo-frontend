@@ -48,17 +48,8 @@ const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
           className="empty-cart"
           style={{ display: orderList.length > 0 && "none" }}
         >
-          <span>Votre panier est vide</span>
+          <span>Votre panier est vide 😔</span>
         </div>
-        {/* <button
-        style={{
-          backgroundColor: orderList.length > 0 && "#07cdbd",
-          color: orderList.length > 0 > 0 && "white",
-        }}
-      >
-        Valider votre panier
-      </button>
-      */}
         <div
           className={`${orderList.length > 0 ? "display" : ""} hidden`}
           // style={{ display: orderList.length > 0 && "block" }}
