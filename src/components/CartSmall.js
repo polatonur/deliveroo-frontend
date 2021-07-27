@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import emptyCart from "../assets/img/empty-cart.png";
 
 const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
   const [isDisplay, setIsDisplay] = useState(false);
@@ -48,7 +49,9 @@ const CartSmall = ({ orderList, totalPrice, setTotalPrice, setOrderList }) => {
           className="empty-cart"
           style={{ display: orderList.length > 0 && "none" }}
         >
+          {" "}
           <span>Votre panier est vide 😔</span>
+          <img src={emptyCart} alt="shopping cart" />
         </div>
         <div
           className={`${orderList.length > 0 ? "display" : ""} hidden`}
