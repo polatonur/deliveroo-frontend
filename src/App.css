@@ -1,1 +1,518 @@
 /* Other rules */
+/* GLOBAL RULES */
+.container {
+  box-sizing: border-box;
+  max-width: 1204px;
+  margin: 0 auto;
+  padding-right: 372px;
+  padding-left: 10px;
+}
+main {
+  padding-top: 30px;
+  position: relative;
+  background-color: #f3f5f5;
+}
+.app {
+  position: relative;
+}
+
+/* HEADER */
+header {
+  height: 60px;
+  border-bottom: 1px solid #e6e1e1;
+}
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header nav img {
+  margin-left: -4px;
+  height: 100%px;
+  width: 154px;
+}
+
+/* SUB HEADER */
+.sub-header {
+  background-color: white;
+  padding: 30px 10px 30px 10px;
+  height: 257px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1204px;
+}
+.sub-header .col-1 {
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  max-width: 822px;
+  height: 100%;
+}
+.sub-header .col-1 h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 32px;
+  line-height: 26.7px;
+
+  color: #2e3333;
+}
+.sub-header .col-1 p {
+  font-size: 19px;
+  line-height: 28px;
+  color: #868a8a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.sub-header .col-2 {
+  width: 382px;
+}
+.sub-header .col-2 img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 7px;
+}
+
+/* CATEGORIES */
+.category {
+  margin-top: 20px;
+}
+.category h1 {
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 20px;
+  color: #2e3333;
+}
+.category .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/*CARD */
+.category .menu > div {
+  margin-bottom: 25px;
+  width: 400px;
+  height: 161px;
+  flex-shrink: 0;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 15px;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.category .menu div .col-2 {
+  height: 130px;
+  width: 130px;
+  margin-left: 10px;
+  background-color: white;
+}
+.category .menu div .col-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.category .menu div .col-1 {
+  height: 130px;
+  width: 230px;
+  background-color: white;
+}
+.menu .col-1 h2 {
+  font-size: 18px;
+  line-height: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 10px;
+  color: #2e3333;
+}
+.menu .col-1 p {
+  margin-bottom: 20px;
+  color: #808484;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.menu .col-1 .price {
+  margin-right: 8px;
+  color: #808484;
+  font-size: 17px;
+  line-height: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.popular {
+  font-size: 12px;
+  line-height: 10.7px;
+  color: #ff8000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.star {
+  font-size: 1rem;
+  line-height: 10.7px;
+  color: #ff8000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  margin-right: 3px;
+}
+/* CART */
+.cart {
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  min-height: 190px;
+  top: 30px;
+  right: 350px;
+  width: 355px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.cart button {
+  font-size: 1.2rem;
+  color: #868686;
+  width: 100%;
+  border-radius: 5px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: #bac3c3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.cart div {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #868686;
+  font-size: 1rem;
+  min-height: 110px;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+}
+/* FOOTER */
+footer {
+  width: 100vw;
+}
+footer div {
+  background-color: rgb(233, 234, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #808080;
+  font-size: 13px;
+  line-height: 16px;
+  height: 60px;
+  width: 100%;
+}
+
+footer span,
+footer a {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+@media (max-width: 1220px) {
+  .container {
+    width: 840px;
+    margin: 0 auto;
+  }
+  .category {
+    padding-right: 0;
+  }
+  .sub-header {
+    width: 840px;
+    padding: 30px 10px 30px 10px;
+    /* height: 257px; */
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  .sub-header .col-2 img {
+    height: 100%;
+  }
+  .sub-header .col-2 {
+    height: 60%;
+    width: 100%;
+  }
+}
+
+/*--------------- max-width: 992px----------------------  */
+@media (max-width: 992px) {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  .category {
+    font-size: 30px;
+    height: 400px;
+    width: 90vw;
+  }
+  .category h1 {
+    font-size: 30px;
+  }
+  .category .menu {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    height: 80%;
+  }
+  .category .menu > div {
+    height: 280px;
+    width: 600px;
+    margin: 0 10px;
+    /* border: 1px solid rgb(184, 182, 182); */
+    box-shadow: 0 0 10px gey;
+  }
+  .category .menu > div > .col-1,
+  .category .menu > div > .col-2 {
+    height: 100%;
+  }
+  .category .menu > div > .col-1 {
+    width: 57%;
+  }
+  .category .menu > div > .col-2 {
+    width: 43%;
+  }
+  .menu .col-1 h2 {
+    font-size: 25px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+  .menu .col-1 p {
+    font-size: 20px;
+    line-height: 25px;
+    color: #808484;
+  }
+  .menu .col-1 .price {
+    color: #808484;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .popular {
+    font-size: 17px;
+    line-height: 19px;
+  }
+  .sub-header {
+    width: 90vw;
+    padding: 30px 10px 30px 10px;
+    /* height: 257px; */
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+  .sub-header .col-2 img {
+    height: 100%;
+  }
+  .sub-header .col-2 {
+    height: 60%;
+    width: 100%;
+  }
+}
+/*--------------- max-width: 768px----------------------  */
+@media (max-width: 768px) {
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  nav {
+    justify-content: center;
+  }
+  .category {
+    height: 47vw;
+    width: 90vw;
+  }
+  .category h1 {
+    font-size: 30px;
+  }
+  .category .menu {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    height: 80%;
+  }
+  .category .menu > div {
+    height: 200px;
+    width: 500px;
+    margin: 0 10px;
+    /* border: 1px solid rgb(184, 182, 182); */
+    box-shadow: 0 0 10px gey;
+  }
+  .category .menu > div > .col-1,
+  .category .menu > div > .col-2 {
+    height: 100%;
+  }
+  .category .menu > div > .col-1 {
+    width: 57%;
+  }
+  .category .menu > div > .col-2 {
+    width: 43%;
+  }
+  .menu .col-1 h2 {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 600;
+  }
+  .menu .col-1 p {
+    font-size: 17px;
+    line-height: 20px;
+    color: #808484;
+  }
+  .menu .col-1 .price {
+    color: #808484;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .popular {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .sub-header {
+    padding-top: 0;
+    width: 90vw;
+
+    /* height: 257px; */
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+  }
+
+  .sub-header .col-2 img {
+    height: 100%;
+  }
+  .sub-header .col-1 {
+    height: 50%;
+  }
+  .sub-header .col-2 {
+    height: 70%;
+    width: 100%;
+  }
+  .sub-header .col-1 h1 {
+    color: #6b6d6d;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 29px;
+    line-height: 32px;
+
+    color: #2e3333;
+  }
+  .sub-header .col-1 p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/*--------------- max-width: 567px----------------------  */
+@media (max-width: 576px) {
+  .container {
+    padding-right: 0;
+  }
+  nav {
+    justify-content: center;
+  }
+  main {
+    padding-bottom: 20px;
+  }
+  .category .menu {
+    /* width: 100%; */
+    height: 80%;
+  }
+  .category {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  .category:last-child {
+    margin-bottom: 0px;
+  }
+  .category h1 {
+    margin-left: 10px;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .category .menu > div {
+    width: 90%;
+    height: 100%;
+  }
+  .category .menu > div > .col-1,
+  .category .menu > div > .col-2 {
+    height: 100%;
+  }
+  .category .menu > div > .col-1 {
+    width: 57%;
+  }
+  .category .menu > div > .col-2 {
+    width: 43%;
+  }
+  .menu .col-1 h2 {
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 600;
+  }
+  .menu .col-1 p {
+    font-size: 10px;
+    line-height: 12px;
+    color: #808484;
+    margin-bottom: 10px;
+  }
+  .menu .col-1 .price {
+    color: #808484;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .popular {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .sub-header {
+    padding-top: 0;
+    width: 90vw;
+
+    /* height: 257px; */
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+
+  .sub-header .col-2 img {
+    height: 100%;
+  }
+  .sub-header .col-1 {
+    height: 50%;
+    padding-right: 0;
+  }
+  .sub-header .col-2 {
+    height: 60%;
+    width: 100%;
+  }
+  .sub-header .col-1 h1 {
+    color: #6b6d6d;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+
+    color: #2e3333;
+  }
+  .sub-header .col-1 p {
+    font-size: 14px;
+    line-height: 1.2rem;
+    text-align: justify;
+  }
+}
