@@ -120,12 +120,12 @@ header nav img {
   justify-content: space-between;
 }
 .arrow {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   line-height: 1rem;
-  position: none;
+  position: absolute;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -355,6 +355,9 @@ footer a {
     height: 60%;
     width: 100%;
   }
+  .arrow {
+    display: flex;
+  }
 }
 /*--------------- max-width: 768px----------------------  */
 @media (max-width: 768px) {
@@ -372,7 +375,7 @@ footer a {
     width: 95vw;
   }
   .arrow {
-    position: absolute;
+    display: flex;
   }
   .category h1 {
     font-size: 30px;
